@@ -21,13 +21,11 @@ CREATE TABLE Instructors (
 );
 GO
 
-CREATE TABLE Students (
-    StudentID INT NOT NULL PRIMARY KEY,
-    StudentName NVARCHAR(100) NOT NULL,
-    BirthDate DATE NULL,
-    Gender NVARCHAR(10) NULL,
-    SubjectID INT NULL,
-    CONSTRAINT FK_Students_Subjects FOREIGN KEY (SubjectID) 
-        REFERENCES Subjects(SubjectID)
-);
+ CREATE TABLE Students (
+     StudentID VARCHAR(20) PRIMARY KEY,
+     StudentName NVARCHAR(100) NOT NULL,
+     BirthDate DATE NULL,
+     Gender NVARCHAR(10) NULL,
+     SubjectID INT REFERENCES Subjects(SubjectID)
+ );
 GO
