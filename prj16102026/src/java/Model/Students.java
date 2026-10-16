@@ -4,8 +4,7 @@ import java.sql.Date;
 
 public class Students {
 
-    int StudentID;
-    String StudentName;
+    String StudentID, StudentName;
     Date BirthDate;
     String Gender;
     int SubjectID;
@@ -13,7 +12,7 @@ public class Students {
     public Students() {
     }
 
-    public Students(int StudentID, String StudentName, Date BirthDate, String Gender, int SubjectID) {
+    public Students(String StudentID, String StudentName, Date BirthDate, String Gender, int SubjectID) {
         this.StudentID = StudentID;
         this.StudentName = StudentName;
         this.BirthDate = BirthDate;
@@ -21,11 +20,11 @@ public class Students {
         this.SubjectID = SubjectID;
     }
 
-    public int getStudentID() {
+    public String getStudentID() {
         return StudentID;
     }
 
-    public void setStudentID(int StudentID) {
+    public void setStudentID(String StudentID) {
         this.StudentID = StudentID;
     }
 
